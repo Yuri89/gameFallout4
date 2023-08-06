@@ -8,14 +8,9 @@ html {
     background-color: rgb(63, 63, 63);
     color: #e7e7e7;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-.link {
-    color: #e7e7e7;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
 
 header {
     background-color: #111111;
@@ -73,6 +68,7 @@ main {
     justify-content: center;
     padding: 20px;
     background-image: url('/Img/template.png');
+    background-size: cover;
 }
 
 .secao1 img {
@@ -82,10 +78,12 @@ main {
     padding: 10px;
 }
 
+
+
 .secao1 span {
+    top: -100px;
     position: relative;
     text-align: center;
-    top: -350px;
     font-size: 2rem;
     filter: drop-shadow(0px 0px 1px rgb(255, 255, 255)) drop-shadow(0px 0px 10px rgb(0, 0, 0));
 }
@@ -94,16 +92,34 @@ main {
     background-color: #1f1f1f;
 }
 
+.carroseu-container{
+    box-shadow: 10px 10px 0px;
+    border-radius: 10px;
+    background-color:#111111;
+}
+
+.carroseu-container h3{
+    position: relative;
+    top: 3vw;
+    left: 25vh;
+    font-size: 2.5rem;
+}
+
 .secao2 img{
     height: 50vh;
     border-radius: 10px;
+    
+}
+
+.secao2 .divTexto1{
+    padding-left: 80px;
 }
 
 .divOrganizacao2{
     padding: 100px 50px;
     display: flex;
     flex-direction: row-reverse;
-    gap: 10vw;
+    gap: 5vw;
     justify-content: center;
 }
 
@@ -114,6 +130,10 @@ main {
 .secao3 img{
     height: 50vh;
     border-radius: 10px;
+}
+
+.secao3 .divTexto1{
+    padding-right: 80px;
 }
 
 .divOrganizacao3{
@@ -135,10 +155,11 @@ footer {
     display: flex;
     justify-content:space-around;
     align-items: center;
+    
 }
 
 .container-Footer img {
-    height: 10vh;
+    height: 15vh;
     padding: 0px 30px 0px;
     filter: drop-shadow(0px 0px 0.5px rgb(255, 255, 255)) drop-shadow(0px 0px 1.5px rgb(255, 196, 69)) drop-shadow(0px 0px 2.5px rgb(255, 115, 0));
 
@@ -157,4 +178,81 @@ footer {
     flex-direction: column;
     list-style: none;
     align-items: center;
+}
+
+.dropButton{
+    display: none;
+}
+@media only screen and (max-width: 1020px) {
+    .secao1 span h1{
+        top: -100px;
+        font-size: 1.5rem;
+    }
+        
+}
+
+@media only screen and (max-width: 1101px) {
+    .divOrganizacao2{
+        padding: 100px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .divOrganizacao3{
+        padding: 100px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+        
+    .secao2 .divTexto1{
+    padding-left: 0px;
+    }
+
+    .secao2 .divTexto2{
+        padding-right: 0px;
+        }
+
+        .carroseu-container{
+            box-shadow: 10px 10px 0px;
+            border-radius: 10px;
+            background-color:#111111;
+            width: 100vw;
+        }
+
+        .carroseu-container img{
+                width: 100vw;
+        }
+        
+        .carroseu-container h3{
+            position: relative;
+            top: 1vw;
+            left: 40vh;
+            font-size: 2.5rem;
+        }
+}
+
+@media only screen and (max-width: 550px) {
+    .carroseu-container{
+        box-shadow: 10px 10px 0px;
+        border-radius: 10px;
+        background-color:#111111;
+        width: 100vw;
+    }
+
+    
+    .carroseu-container h3{
+        position: relative;
+        top: 1vw;
+        left: 25vh;
+        font-size: 2.5rem;
+    }
+
+    .container-Header ul{
+        display: none;
+    }
+
+    .dropButton{
+        display: inline;
+    }
 }
